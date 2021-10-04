@@ -1,0 +1,166 @@
+<!-- header -->
+
+<html>
+    <head>
+        <title> IISc RT-PCR Test Report - SRF ID {{ reportData.srfid }} </title>
+        <style>
+            #txtTable {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            #txtTable1 {
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+            }
+            th, td {
+                padding: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="0">
+            <tr>
+                <td>
+                    <img src="iisc_logo.png" width="128" height="128" alt="IISc Logo"/>
+                </td>
+                <td>
+                    <center>
+                    <b> COVID-19 Diagnostic Laboratory </b> <br/>
+                    <b> Infosys Wing, Center for Infectious Disease Research</b> <br />
+                    <b> Indian Institute of Science, C.V. Raman Avenue</b>
+                    <b> Bangalore 560012, Karnataka</b> <br />
+                    <b> Email: covidtest@iisc.ac.in </b>
+                    </center>
+                </td>
+                <td align="right">
+                    <img src="{{ reportData.qrcodeImgFile }}" width="128" heigth="128" />
+                </td>
+            </tr>
+        </table>
+        <p />
+        <br />
+        <hr />
+
+<!-- body -->
+
+<br />
+<center> <h3> <u> RT-PCR Test Report </u> </h3> </center>
+<br />
+
+    <table id="txtTable">
+        <tr>
+            <td> Report Date</td>
+            <td> {{ reportData.reportDate }} </td>
+        </tr>
+        <tr>
+            <td> Sample collection facility name: <br />
+                 Collection cacility pin-code:
+            </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> Date of onset of illness </td>
+            <td>  </td>
+        </tr>
+        <tr>
+            <td> Specimen Collection Date</td>
+            <td> {{ reportData.sampleCollectionDate }} </td>
+        </tr>
+        <tr>
+            <td> Sample Received Date and Time </td>
+            <td> {{ reportData.sampleRcptDateTime }} </td>
+        </tr>
+        <tr>
+            <td> Condition of specimen received/ Quality on arrival</td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> Test report sent to (Doctor email ID) </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td colspan="2"> REPORTING DETAILS </td>
+        </tr>
+        <tr>
+            <td> IISc Testing ID</td>
+            <td> {{ reportData.sampleIIScID }} </td>
+        </tr>
+        <tr>
+            <td> ICMR ID</td>
+            <td> {{ reportData.sampleICMRID }} </td>
+        </tr>
+    </table>
+
+    <br />
+    <p />
+
+    <table id="txtTable1">
+        <tr>
+            <th>
+                Sr. No.
+            </th>
+            <th>
+                Sample ID (Label)
+            </th>
+            <th>
+                Patient Name
+            </th>
+            <th>
+                Age (in years)
+            </th>
+            <th>
+                Gender
+            </th>
+            <th>
+                Specimen type
+            </th>
+            <th>
+                Date of Sample testing
+            </th>
+            <th>
+                2019-nCov Test RESULT
+            </th>
+        </tr>
+        <tr>
+            <td> 1. </td>
+            <td> {{ reportData.srfid }} </td>
+            <td> {{ reportData.patientName }} </td>
+            <td> {{ reportData.patientAge }} </td>
+            <td> {{ reportData.patientGender }} </td>
+            <td> {{ reportData.sampleType }} </td>
+            <td> {{ reportData.testDate }} </td>
+            <td> {{ reportData.testResult }} </td>
+        </tr>
+    </table>
+
+    <br />
+    <table border="0">
+        <tr>
+            <td> Prepared <br /> <img src="prep_sign.png" width="148" height="118" alt="Prepared by signature"/> <br /> Mrs. Madhumol Jeevan </td>
+            <td>  <img src="lab_seal.png" width="140" height="125" alt="Lab seal"/> </td>
+            <td> Checked and Approved <br /> <img src="approver_sign.png" width="140" height="105" alt="Approved by signature"/> <br />Dr. Satish Rao C, MBBS, CCDE </td>
+        </tr>
+    </table>
+    <!-- footer -->
+
+    <br />
+    <hr />
+    <font size="small">
+        <i>
+        <u>Note:</u> The results relate only to the specimen tested and should be
+        correlated with clinical findings. <br />
+        <u>Interpretation guidance:-</u>
+        <ul>
+            <li> Testing of referred clinical specimens was considered on the basis of request / referral received from / through State Surveillance Officer (SSO) of concerned State Integrated Disease Surveillance Programme (IDSP)/ any other health care facility affirming requirements of the case definition/s.</li>
+            <li> A single negative test result, particularly if this is from an upper respiratory tract specimen, does not exclude infection* </li>
+            <li> A positive test result is only tentative, and will be reconfirmed by retesting.</li>
+            <li> Repeat sampling and testing of lower respiratory specimen is strongly recommended in severe or progressive disease. The repeat specimens may be considered after a gap of 2 – 4 days after the collection of the first specimen for additional testing if required. *</li>
+            <li> A positive alternate pathogen does not necessarily rule out either, as little is yet known about the role of coinfections.</li>
+            <li> Please note that these results are not to be used for any thesis or presentations or for Publication in any Journal without the prior permission of the Director General, ICMR </li>
+        </ul>
+        </i>
+    </font>
+
+    </body
+    </html>
